@@ -1,0 +1,122 @@
+navin-ganges@navin-ganges:~$ su hduser 
+Password: 
+hduser@navin-ganges:/home/navin-ganges$ cd ~
+hduser@navin-ganges:~$ ls
+examples.desktop  hadoop-2.6.0
+hduser@navin-ganges:~$ ll
+total 48
+drwxr-xr-x 5 hduser hadoop 4096 Sep  4 18:59 ./
+drwxr-xr-x 5 root   root   4096 Sep  4 19:23 ../
+-rw------- 1 hduser hadoop 1374 Sep  4 18:59 .bash_history
+-rw-r--r-- 1 hduser hadoop  220 Sep  3 17:54 .bash_logout
+-rw-r--r-- 1 hduser hadoop 3980 Sep  3 18:52 .bashrc
+drwx------ 2 hduser hadoop 4096 Sep  3 17:59 .cache/
+-rw-r--r-- 1 hduser hadoop 8445 Sep  3 17:54 examples.desktop
+drwxr-xr-x 2 hduser hadoop 4096 Sep  3 18:48 hadoop-2.6.0/
+-rw-r--r-- 1 hduser hadoop  675 Sep  3 17:54 .profile
+drwx------ 2 hduser hadoop 4096 Sep  3 17:59 .ssh/
+hduser@navin-ganges:~$ hadoop fs -ls
+16/09/06 18:31:14 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+ls: Call From navin-ganges/127.0.1.1 to localhost:54310 failed on connection exception: java.net.ConnectException: Connection refused; For more details see:  http://wiki.apache.org/hadoop/ConnectionRefused
+hduser@navin-ganges:~$ hadoop fs -ls
+16/09/06 18:43:43 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+ls: Call From navin-ganges/127.0.1.1 to localhost:54310 failed on connection exception: java.net.ConnectException: Connection refused; For more details see:  http://wiki.apache.org/hadoop/ConnectionRefused
+hduser@navin-ganges:~$ start-all.sh 
+This script is Deprecated. Instead use start-dfs.sh and start-yarn.sh
+16/09/06 18:44:00 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Starting namenodes on [localhost]
+localhost: starting namenode, logging to /usr/local/hadoop/logs/hadoop-hduser-namenode-navin-ganges.out
+localhost: starting datanode, logging to /usr/local/hadoop/logs/hadoop-hduser-datanode-navin-ganges.out
+Starting secondary namenodes [0.0.0.0]
+0.0.0.0: starting secondarynamenode, logging to /usr/local/hadoop/logs/hadoop-hduser-secondarynamenode-navin-ganges.out
+16/09/06 18:44:25 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+starting yarn daemons
+starting resourcemanager, logging to /usr/local/hadoop/logs/yarn-hduser-resourcemanager-navin-ganges.out
+localhost: starting nodemanager, logging to /usr/local/hadoop/logs/yarn-hduser-nodemanager-navin-ganges.out
+hduser@navin-ganges:~$ hadoop fs -ls
+16/09/06 18:45:12 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+ls: `.': No such file or directory
+hduser@navin-ganges:~$ hadoop fs -ls .
+16/09/06 18:45:25 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+ls: `.': No such file or directory
+hduser@navin-ganges:~$ hadoop fs -ls ./
+16/09/06 18:45:35 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+ls: `./': No such file or directory
+hduser@navin-ganges:~$ hadoop fs -mkdir /Project_Purple
+16/09/06 18:48:47 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+hduser@navin-ganges:~$ hadoop fs -ls .
+16/09/06 18:49:01 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+ls: `.': No such file or directory
+hduser@navin-ganges:~$ hadoop fs -ls /
+16/09/06 18:49:10 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+hduser@navin-ganges:~$ hadoop fs -ls /
+16/09/06 18:49:10 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Found 2 items
+drwxr-xr-x   - hduser supergroup          0 2016-09-04 17:49 /Examples
+drwxr-xr-x   - hduser supergroup          0 2016-09-06 18:48 /Project_Purple
+hduser@navin-ganges:~$ hadoop fs -pwd
+-pwd: Unknown command
+hduser@navin-ganges:~$ pwd
+/home/hduser
+hduser@navin-ganges:~$ hadoop fs 
+Usage: hadoop fs [generic options]
+	[-appendToFile <localsrc> ... <dst>]
+	[-cat [-ignoreCrc] <src> ...]
+	[-checksum <src> ...]
+	[-chgrp [-R] GROUP PATH...]
+	[-chmod [-R] <MODE[,MODE]... | OCTALMODE> PATH...]
+	[-chown [-R] [OWNER][:[GROUP]] PATH...]
+	[-copyFromLocal [-f] [-p] [-l] <localsrc> ... <dst>]
+	[-copyToLocal [-p] [-ignoreCrc] [-crc] <src> ... <localdst>]
+	[-count [-q] [-h] <path> ...]
+	[-cp [-f] [-p | -p[topax]] <src> ... <dst>]
+	[-createSnapshot <snapshotDir> [<snapshotName>]]
+	[-deleteSnapshot <snapshotDir> <snapshotName>]
+	[-df [-h] [<path> ...]]
+	[-du [-s] [-h] <path> ...]
+	[-expunge]
+	[-get [-p] [-ignoreCrc] [-crc] <src> ... <localdst>]
+	[-getfacl [-R] <path>]
+	[-getfattr [-R] {-n name | -d} [-e en] <path>]
+	[-getmerge [-nl] <src> <localdst>]
+	[-help [cmd ...]]
+	[-ls [-d] [-h] [-R] [<path> ...]]
+	[-mkdir [-p] <path> ...]
+	[-moveFromLocal <localsrc> ... <dst>]
+	[-moveToLocal <src> <localdst>]
+	[-mv <src> ... <dst>]
+	[-put [-f] [-p] [-l] <localsrc> ... <dst>]
+	[-renameSnapshot <snapshotDir> <oldName> <newName>]
+	[-rm [-f] [-r|-R] [-skipTrash] <src> ...]
+	[-rmdir [--ignore-fail-on-non-empty] <dir> ...]
+	[-setfacl [-R] [{-b|-k} {-m|-x <acl_spec>} <path>]|[--set <acl_spec> <path>]]
+	[-setfattr {-n name [-v value] | -x name} <path>]
+	[-setrep [-R] [-w] <rep> <path> ...]
+	[-stat [format] <path> ...]
+	[-tail [-f] <file>]
+	[-test -[defsz] <path>]
+[-text [-ignoreCrc] <src> ...]
+	[-touchz <path> ...]
+	[-usage [cmd ...]]
+
+Generic options supported are
+-conf <configuration file>     specify an application configuration file
+-D <property=value>            use value for given property
+-fs <local|namenode:port>      specify a namenode
+-jt <local|resourcemanager:port>    specify a ResourceManager
+-files <comma separated list of files>    specify comma separated files to be copied to the map reduce cluster
+-libjars <comma separated list of jars>    specify comma separated jar files to include in the classpath.
+-archives <comma separated list of archives>    specify comma separated archives to be unarchived on the compute machines.
+
+The general command line syntax is
+bin/hadoop command [genericOptions] [commandOptions]
+
+hduser@navin-ganges:~$ hadoop fs -put 
+.bash_history     .bashrc           examples.desktop  .profile
+.bash_logout      .cache/           hadoop-2.6.0/     .ssh/
+hduser@navin-ganges:~$ hadoop fs -ls /
+16/09/06 19:09:46 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Found 2 items
+drwxr-xr-x   - hduser supergroup          0 2016-09-04 17:49 /Examples
+drwxr-xr-x   - hduser supergroup          0 2016-09-06 18:48 /Project_Purple
+
