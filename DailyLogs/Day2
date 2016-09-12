@@ -1,0 +1,102 @@
+hduser@navin-ganges:~$ start-all.sh 
+This script is Deprecated. Instead use start-dfs.sh and start-yarn.sh
+16/09/07 20:28:35 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Starting namenodes on [localhost]
+localhost: starting namenode, logging to /usr/local/hadoop/logs/hadoop-hduser-namenode-navin-ganges.out
+localhost: starting datanode, logging to /usr/local/hadoop/logs/hadoop-hduser-datanode-navin-ganges.out
+Starting secondary namenodes [0.0.0.0]
+0.0.0.0: starting secondarynamenode, logging to /usr/local/hadoop/logs/hadoop-hduser-secondarynamenode-navin-ganges.out
+16/09/07 20:29:00 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+starting yarn daemons
+starting resourcemanager, logging to /usr/local/hadoop/logs/yarn-hduser-resourcemanager-navin-ganges.out
+localhost: starting nodemanager, logging to /usr/local/hadoop/logs/yarn-hduser-nodemanager-navin-ganges.out
+hduser@navin-ganges:~$ hadoop fs -mkdir /Inputs
+16/09/07 20:32:22 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+hduser@navin-ganges:~$ hadoop fs -ls /
+16/09/07 20:32:36 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Found 3 items
+drwxr-xr-x   - hduser supergroup          0 2016-09-04 17:49 /Examples
+drwxr-xr-x   - hduser supergroup          0 2016-09-07 20:32 /Inputs
+drwxr-xr-x   - hduser supergroup          0 2016-09-06 18:48 /Project_Purple
+hduser@navin-ganges:~$ hadoop fs -put /home/navin-ganges/Documents/Input\ LFS/wordcounttext /Inputs
+16/09/07 20:34:20 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+put: unexpected URISyntaxException
+hduser@navin-ganges:~$ hadoop fs -copyFromLocal /home/navin-ganges/Documents/Input\ LFS/wordcounttext /Inputs
+16/09/07 20:35:10 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+copyFromLocal: unexpected URISyntaxException
+hduser@navin-ganges:~$ hadoop fs -put /home/navin-ganges/Documents/Input\ LFS/wordcounttext /
+app/        etc/        media/      root/       sys/        
+bin/        home/       mnt/        run/        tmp/        
+boot/       initrd.img  old-home/   sbin/       usr/        
+cdrom/      lib/        opt/        selinux/    var/        
+dev/        lost+found/ proc/       srv/        vmlinuz     
+hduser@navin-ganges:~$ hadoop fs -put /home/navin-ganges/Documents/Input\ LFS/wordcounttext /usr/local/hadoop/
+bin/         include/     libexec/     logs/        README.txt   share/
+etc/         lib/         LICENSE.txt  NOTICE.txt   sbin/        
+hduser@navin-ganges:~$ hadoop fs -put /home/navin-ganges/Documents/Input\ LFS/wordcounttext /usr/local/hadoop/etc/hadoop/
+capacity-scheduler.xml      kms-env.sh
+configuration.xsl           kms-log4j.properties
+container-executor.cfg      kms-site.xml
+core-site.xml               log4j.properties
+hadoop-env.cmd              mapred-env.cmd
+hadoop-env.sh               mapred-env.sh
+hadoop-metrics2.properties  mapred-queues.xml.template
+hadoop-metrics.properties   mapred-site.xml
+hadoop-policy.xml           mapred-site.xml.template
+hdfs-site.xml               slaves
+httpfs-env.sh               ssl-client.xml.example
+httpfs-log4j.properties     ssl-server.xml.example
+httpfs-signature.secret     yarn-env.cmd
+httpfs-site.xml             yarn-env.sh
+kms-acls.xml                yarn-site.xml
+hduser@navin-ganges:~$ hadoop fs -put /home/navin-ganges/Documents/Input\ LFS/wordcounttext /usr/local/hadoop/
+bin/         include/     libexec/     logs/        README.txt   share/
+etc/         lib/         LICENSE.txt  NOTICE.txt   sbin/        
+hduser@navin-ganges:~$ hadoop fs -put /home/navin-ganges/Documents/Input\ LFS/wordcounttext /usr/local/hadoop/share/
+doc/    hadoop/ 
+hduser@navin-ganges:~$ hadoop fs -ls /
+16/09/07 20:36:49 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Found 3 items
+drwxr-xr-x   - hduser supergroup          0 2016-09-04 17:49 /Examples
+drwxr-xr-x   - hduser supergroup          0 2016-09-07 20:32 /Inputs
+drwxr-xr-x   - hduser supergroup          0 2016-09-06 18:48 /Project_Purple
+hduser@navin-ganges:~$ hadoop fs -put /home/navin-ganges/Documents/Input\ LFS/wordcounttext 
+.bash_history     .bashrc           examples.desktop  .profile
+.bash_logout      .cache/           hadoop-2.6.0/     .ssh/
+hduser@navin-ganges:~$ hadoop fs -put /home/navin-ganges/Documents/Input\ LFS/wordcounttext /
+app/        etc/        media/      root/       sys/        
+bin/        home/       mnt/        run/        tmp/        
+boot/       initrd.img  old-home/   sbin/       usr/        
+cdrom/      lib/        opt/        selinux/    var/        
+dev/        lost+found/ proc/       srv/        vmlinuz     
+hduser@navin-ganges:~$ hadoop fs -put /home/navin-ganges/Documents/Input\ LFS/wordcounttext /usr/local/hadoop
+hadoop/       hadoop_store/ 
+hduser@navin-ganges:~$ hadoop fs -put /home/navin-ganges/Documents/Input\ LFS/wordcounttext /usr/local/hadoop_store/hdfs/
+datanode/ namenode/ 
+hduser@navin-ganges:~$ hadoop fs -put /home/navin-ganges/Documents/Input\ LFS/wordcounttext /usr/local/hadoop_store/hdfs/
+datanode/ namenode/ 
+hduser@navin-ganges:~$ hadoop fs -put /home/navin-ganges/Documents/Input\ LFS/wordcounttext /usr/local/hadoop_store/hdfs/namenode/
+current/     in_use.lock  
+hduser@navin-ganges:~$ hadoop fs -put /home/navin-ganges/Documents/Input\ LFS/wordcounttext /usr/local/hadoop_store/hdfs/namenode/current/
+edits_0000000000000000001-0000000000000000002
+edits_0000000000000000003-0000000000000000003
+edits_0000000000000000004-0000000000000000005
+edits_0000000000000000006-0000000000000000006
+edits_0000000000000000007-0000000000000000008
+edits_0000000000000000009-0000000000000000010
+edits_0000000000000000011-0000000000000000012
+edits_0000000000000000013-0000000000000000014
+edits_inprogress_0000000000000000015
+fsimage_0000000000000000012
+fsimage_0000000000000000012.md5
+fsimage_0000000000000000014
+fsimage_0000000000000000014.md5
+seen_txid
+VERSION
+hduser@navin-ganges:~$ hadoop fs -ls /
+16/09/07 20:39:28 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Found 3 items
+drwxr-xr-x   - hduser supergroup          0 2016-09-04 17:49 /Examples
+drwxr-xr-x   - hduser supergroup          0 2016-09-07 20:32 /Inputs
+drwxr-xr-x   - hduser supergroup          0 2016-09-06 18:48 /Project_Purple
+
