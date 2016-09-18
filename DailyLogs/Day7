@@ -1,0 +1,488 @@
+hduser@navin-ganges:~$ hadoop jar /home/navin-ganges/Documents/ProjectJars/MRCodec11.jar MRCoDecDemo /Inputs/DataSet /Outputs/CodecOp12
+16/09/18 14:14:31 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/09/18 14:14:33 INFO Configuration.deprecation: session.id is deprecated. Instead, use dfs.metrics.session-id
+16/09/18 14:14:33 INFO jvm.JvmMetrics: Initializing JVM Metrics with processName=JobTracker, sessionId=
+16/09/18 14:14:34 WARN mapreduce.JobSubmitter: Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+16/09/18 14:14:34 INFO input.FileInputFormat: Total input paths to process : 1
+16/09/18 14:14:34 INFO mapreduce.JobSubmitter: number of splits:1
+16/09/18 14:14:35 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_local2136861684_0001
+16/09/18 14:14:35 INFO mapreduce.Job: The url to track the job: http://localhost:8080/
+16/09/18 14:14:35 INFO mapreduce.Job: Running job: job_local2136861684_0001
+16/09/18 14:14:35 INFO mapred.LocalJobRunner: OutputCommitter set in config null
+16/09/18 14:14:35 INFO mapred.LocalJobRunner: OutputCommitter is org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+16/09/18 14:14:35 INFO mapred.LocalJobRunner: Waiting for map tasks
+16/09/18 14:14:35 INFO mapred.LocalJobRunner: Starting task: attempt_local2136861684_0001_m_000000_0
+16/09/18 14:14:36 INFO mapred.Task:  Using ResourceCalculatorProcessTree : [ ]
+16/09/18 14:14:36 INFO mapred.MapTask: Processing split: hdfs://localhost:54310/Inputs/DataSet:0+282760
+16/09/18 14:14:39 INFO mapreduce.Job: Job job_local2136861684_0001 running in uber mode : false
+16/09/18 14:14:40 INFO mapred.MapTask: (EQUATOR) 0 kvi 26214396(104857584)
+16/09/18 14:14:40 INFO mapred.MapTask: mapreduce.task.io.sort.mb: 100
+16/09/18 14:14:40 INFO mapred.MapTask: soft limit at 83886080
+16/09/18 14:14:40 INFO mapred.MapTask: bufstart = 0; bufvoid = 104857600
+16/09/18 14:14:40 INFO mapred.MapTask: kvstart = 26214396; length = 6553600
+16/09/18 14:14:41 INFO mapreduce.Job:  map 0% reduce 0%
+16/09/18 14:14:43 INFO mapred.MapTask: Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer
+16/09/18 14:14:46 INFO mapred.LocalJobRunner: 
+16/09/18 14:14:46 INFO mapred.MapTask: Starting flush of map output
+16/09/18 14:14:46 INFO mapred.MapTask: Spilling map output
+16/09/18 14:14:46 INFO mapred.MapTask: bufstart = 0; bufend = 54883; bufvoid = 104857600
+16/09/18 14:14:46 INFO mapred.MapTask: kvstart = 26214396(104857584); kvend = 26192548(104770192); length = 21849/6553600
+16/09/18 14:14:47 INFO mapred.MapTask: Finished spill 0
+16/09/18 14:14:47 INFO mapred.Task: Task:attempt_local2136861684_0001_m_000000_0 is done. And is in the process of committing
+16/09/18 14:14:47 INFO mapred.LocalJobRunner: map
+16/09/18 14:14:47 INFO mapred.Task: Task 'attempt_local2136861684_0001_m_000000_0' done.
+16/09/18 14:14:47 INFO mapred.LocalJobRunner: Finishing task: attempt_local2136861684_0001_m_000000_0
+16/09/18 14:14:47 INFO mapred.LocalJobRunner: map task executor complete.
+16/09/18 14:14:47 INFO mapred.LocalJobRunner: Waiting for reduce tasks
+16/09/18 14:14:47 INFO mapred.LocalJobRunner: Starting task: attempt_local2136861684_0001_r_000000_0
+16/09/18 14:14:47 INFO mapred.Task:  Using ResourceCalculatorProcessTree : [ ]
+16/09/18 14:14:47 INFO mapred.ReduceTask: Using ShuffleConsumerPlugin: org.apache.hadoop.mapreduce.task.reduce.Shuffle@1144d62
+16/09/18 14:14:47 INFO reduce.MergeManagerImpl: MergerManager: memoryLimit=363285696, maxSingleShuffleLimit=90821424, mergeThreshold=239768576, ioSortFactor=10, memToMemMergeOutputsThreshold=10
+16/09/18 14:14:47 INFO reduce.EventFetcher: attempt_local2136861684_0001_r_000000_0 Thread started: EventFetcher for fetching Map Completion Events
+16/09/18 14:14:48 INFO mapreduce.Job:  map 100% reduce 0%
+16/09/18 14:14:48 INFO reduce.LocalFetcher: localfetcher#1 about to shuffle output of map attempt_local2136861684_0001_m_000000_0 decomp: 65811 len: 65815 to MEMORY
+16/09/18 14:14:48 INFO reduce.InMemoryMapOutput: Read 65811 bytes from map-output for attempt_local2136861684_0001_m_000000_0
+16/09/18 14:14:48 INFO reduce.MergeManagerImpl: closeInMemoryFile -> map-output of size: 65811, inMemoryMapOutputs.size() -> 1, commitMemory -> 0, usedMemory ->65811
+16/09/18 14:14:48 INFO reduce.EventFetcher: EventFetcher is interrupted.. Returning
+16/09/18 14:14:48 INFO mapred.LocalJobRunner: 1 / 1 copied.
+16/09/18 14:14:48 INFO reduce.MergeManagerImpl: finalMerge called with 1 in-memory map-outputs and 0 on-disk map-outputs
+16/09/18 14:14:48 INFO mapred.Merger: Merging 1 sorted segments
+16/09/18 14:14:48 INFO mapred.Merger: Down to the last merge-pass, with 1 segments left of total size: 65803 bytes
+16/09/18 14:14:48 INFO reduce.MergeManagerImpl: Merged 1 segments, 65811 bytes to disk to satisfy reduce memory limit
+16/09/18 14:14:48 INFO reduce.MergeManagerImpl: Merging 1 files, 65815 bytes from disk
+16/09/18 14:14:48 INFO reduce.MergeManagerImpl: Merging 0 segments, 0 bytes from memory into reduce
+16/09/18 14:14:48 INFO mapred.Merger: Merging 1 sorted segments
+16/09/18 14:14:48 INFO mapred.Merger: Down to the last merge-pass, with 1 segments left of total size: 65803 bytes
+16/09/18 14:14:48 INFO mapred.LocalJobRunner: 1 / 1 copied.
+16/09/18 14:14:48 INFO Configuration.deprecation: mapred.skip.on is deprecated. Instead, use mapreduce.job.skiprecords
+16/09/18 14:14:49 INFO mapred.Task: Task:attempt_local2136861684_0001_r_000000_0 is done. And is in the process of committing
+16/09/18 14:14:49 INFO mapred.LocalJobRunner: 1 / 1 copied.
+16/09/18 14:14:49 INFO mapred.Task: Task attempt_local2136861684_0001_r_000000_0 is allowed to commit now
+16/09/18 14:14:50 INFO output.FileOutputCommitter: Saved output of task 'attempt_local2136861684_0001_r_000000_0' to hdfs://localhost:54310/Outputs/CodecOp12/_temporary/0/task_local2136861684_0001_r_000000
+16/09/18 14:14:50 INFO mapred.LocalJobRunner: reduce > reduce
+16/09/18 14:14:50 INFO mapred.Task: Task 'attempt_local2136861684_0001_r_000000_0' done.
+16/09/18 14:14:50 INFO mapred.LocalJobRunner: Finishing task: attempt_local2136861684_0001_r_000000_0
+16/09/18 14:14:50 INFO mapred.LocalJobRunner: reduce task executor complete.
+16/09/18 14:14:51 INFO mapreduce.Job:  map 100% reduce 100%
+16/09/18 14:14:51 INFO mapreduce.Job: Job job_local2136861684_0001 completed successfully
+16/09/18 14:14:51 INFO mapreduce.Job: Counters: 38
+	File System Counters
+		FILE: Number of bytes read=159342
+		FILE: Number of bytes written=726241
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=565520
+		HDFS: Number of bytes written=16875
+		HDFS: Number of read operations=13
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=4
+	Map-Reduce Framework
+		Map input records=28505
+		Map output records=5463
+		Map output bytes=54883
+		Map output materialized bytes=65815
+		Input split bytes=102
+		Combine input records=5463
+		Combine output records=5463
+		Reduce input groups=3141
+		Reduce shuffle bytes=65815
+		Reduce input records=5463
+		Reduce output records=5463
+		Spilled Records=10926
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=317
+		CPU time spent (ms)=0
+		Physical memory (bytes) snapshot=0
+		Virtual memory (bytes) snapshot=0
+		Total committed heap usage (bytes)=233578496
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=282760
+	File Output Format Counters 
+		Bytes Written=16875
+hduser@navin-ganges:~$ hadoop fs -ls /Outputs
+16/09/18 14:15:12 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Found 43 items
+drwxr-xr-x   - hduser supergroup          0 2016-09-16 11:23 /Outputs/CodecOp10
+drwxr-xr-x   - hduser supergroup          0 2016-09-18 13:53 /Outputs/CodecOp11
+drwxr-xr-x   - hduser supergroup          0 2016-09-18 14:14 /Outputs/CodecOp12
+drwxr-xr-x   - hduser supergroup          0 2016-09-12 18:41 /Outputs/DWC1
+drwxr-xr-x   - hduser supergroup          0 2016-09-12 18:56 /Outputs/DWC2
+drwxr-xr-x   - hduser supergroup          0 2016-09-12 19:01 /Outputs/DWC3
+drwxr-xr-x   - hduser supergroup          0 2016-09-13 19:41 /Outputs/MR1
+drwxr-xr-x   - hduser supergroup          0 2016-09-13 19:54 /Outputs/MR2
+drwxr-xr-x   - hduser supergroup          0 2016-09-13 19:58 /Outputs/MR3
+drwxr-xr-x   - hduser supergroup          0 2016-09-13 20:17 /Outputs/MR4
+drwxr-xr-x   - hduser supergroup          0 2016-09-13 20:38 /Outputs/MR5
+drwxr-xr-x   - hduser supergroup          0 2016-09-13 20:42 /Outputs/MR6
+drwxr-xr-x   - hduser supergroup          0 2016-09-14 18:18 /Outputs/MR7
+drwxr-xr-x   - hduser supergroup          0 2016-09-14 18:21 /Outputs/MR8
+drwxr-xr-x   - hduser supergroup          0 2016-09-14 18:27 /Outputs/MR9
+drwxr-xr-x   - hduser supergroup          0 2016-09-14 18:32 /Outputs/MRA
+drwxr-xr-x   - hduser supergroup          0 2016-09-14 18:36 /Outputs/MRB
+drwxr-xr-x   - hduser supergroup          0 2016-09-14 18:39 /Outputs/MRC
+drwxr-xr-x   - hduser supergroup          0 2016-09-14 19:44 /Outputs/MRopT20
+drwxr-xr-x   - hduser supergroup          0 2016-09-14 19:52 /Outputs/MRopT21
+drwxr-xr-x   - hduser supergroup          0 2016-09-14 20:29 /Outputs/MRopT22
+drwxr-xr-x   - hduser supergroup          0 2016-09-14 20:34 /Outputs/MRopT23
+drwxr-xr-x   - hduser supergroup          0 2016-09-14 20:38 /Outputs/MRopT24
+drwxr-xr-x   - hduser supergroup          0 2016-09-14 20:41 /Outputs/MRopT25
+drwxr-xr-x   - hduser supergroup          0 2016-09-15 14:58 /Outputs/MRopT26
+drwxr-xr-x   - hduser supergroup          0 2016-09-15 15:05 /Outputs/MRopT27
+drwxr-xr-x   - hduser supergroup          0 2016-09-15 15:10 /Outputs/MRopT28
+drwxr-xr-x   - hduser supergroup          0 2016-09-15 15:18 /Outputs/MRopT29
+drwxr-xr-x   - hduser supergroup          0 2016-09-15 15:34 /Outputs/MRopT2A
+drwxr-xr-x   - hduser supergroup          0 2016-09-15 15:37 /Outputs/MRopT2B
+drwxr-xr-x   - hduser supergroup          0 2016-09-15 16:12 /Outputs/MRopT2C
+drwxr-xr-x   - hduser supergroup          0 2016-09-15 16:14 /Outputs/MRopT2D
+drwxr-xr-x   - hduser supergroup          0 2016-09-15 16:27 /Outputs/MRopT2E
+drwxr-xr-x   - hduser supergroup          0 2016-09-15 16:38 /Outputs/MRopT2F
+drwxr-xr-x   - hduser supergroup          0 2016-09-15 16:49 /Outputs/MRopT30
+drwxr-xr-x   - hduser supergroup          0 2016-09-15 16:54 /Outputs/MRopT31
+drwxr-xr-x   - hduser supergroup          0 2016-09-15 17:04 /Outputs/MRopT32
+drwxr-xr-x   - hduser supergroup          0 2016-09-15 17:23 /Outputs/MRopT33
+drwxr-xr-x   - hduser supergroup          0 2016-09-15 17:28 /Outputs/MRopT34
+drwxr-xr-x   - hduser supergroup          0 2016-09-15 19:29 /Outputs/MRopT35
+drwxr-xr-x   - hduser supergroup          0 2016-09-15 19:50 /Outputs/MRopT36
+drwxr-xr-x   - hduser supergroup          0 2016-09-16 10:52 /Outputs/MRopT37
+drwxr-xr-x   - hduser supergroup          0 2016-09-13 17:43 /Outputs/WC4
+hduser@navin-ganges:~$ hadoop fs -ls /Outputs/CodecOp12
+16/09/18 14:15:51 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Found 2 items
+-rw-r--r--   1 hduser supergroup          0 2016-09-18 14:14 /Outputs/CodecOp12/_SUCCESS
+-rw-r--r--   1 hduser supergroup      16875 2016-09-18 14:14 /Outputs/CodecOp12/part-r-00000.gz
+hduser@navin-ganges:~$ hadoop fs -text /Outputs/CodecOp12/part-r-00000.gz
+TWANNA	84
+TWILA	94
+TWILA	82
+TWYLA	99
+TWYLA	84
+TWYLA	83
+TYESHA	96
+TYESHA	87
+TYISHA	87
+TYISHA	81
+TYLER	97
+TYLER	83
+TYLER	86
+TYLER	93
+TYLER	98
+TYRA	95
+ULA	95
+ULA	95
+ULA	94
+UN	90
+UNA	91
+UNA	94
+URSULA	85
+URSULA	98
+URSULA	92
+USHA	87
+USHA	86
+UTE	82
+UTE	82
+UTE	85
+VADA	90
+VALARIE	90
+VALARIE	91
+VALARIE	83
+VALDA	94
+VALENE	90
+VALENTINA	96
+VALENTINE	95
+VALENTINE	98
+VALENTINE	92
+VALERI	83
+VALERI	93
+VALERIA	93
+VALERIA	89
+VALERY	94
+VALERY	87
+VALLIE	83
+VALLIE	82
+VALORIE	81
+VAN	98
+VAN	89
+VANDA	93
+VANDA	96
+VANESA	97
+VANESA	99
+VANESSA	90
+VANESSA	88
+VANIA	89
+VANITA	92
+VANITA	94
+VANITA	92
+VANNA	85
+VANNESSA	95
+VASHTI	81
+VELDA	83
+VELLA	86
+VELVA	83
+VELVA	84
+VELVET	86
+VELVET	89
+VENA	82
+VENESSA	82
+VENESSA	86
+VENETTA	94
+VENETTA	91
+VENETTA	89
+VENICE	82
+VENNIE	83
+VENNIE	98
+VENNIE	96
+VENUS	99
+VENUS	97
+VEOLA	93
+VEOLA	99
+VERA	97
+VERDA	90
+VERDA	89
+VERDA	87
+VERDELL	83
+VERENA	85
+VERLA	87
+VERLA	94
+VERLENE	94
+VERLENE	97
+VERLENE	97
+VERLENE	97
+VERLIE	93
+VERNELL	88
+VERNELL	97
+VERNETTA	98
+VERNICE	82
+VERNICE	99
+VERNIE	89
+VERNIE	84
+VERONA	92
+VERONA	86
+VERONICA	81
+VERONICA	84
+VERONICA	95
+VERONIQUE	88
+VERSIE	99
+VERTIE	95
+VERTIE	89
+VESTA	91
+VETA	94
+VICENTA	98
+VICENTA	83
+VICENTA	92
+VICKI	94
+VICKIE	96
+VICKIE	83
+VICKY	99
+VICTOR	99
+VICTOR	95
+VICTORIA	81
+VICTORIA	99
+VIDA	93
+VIDA	88
+VIDA	87
+VIKI	85
+VIKI	83
+VILMA	86
+VILMA	82
+VINA	95
+VINA	96
+VINCENZA	86
+VINNIE	99
+VINNIE	87
+VIOLET	86
+VIOLET	92
+VIOLETA	88
+VIOLETA	86
+VIOLETTE	82
+VIOLETTE	95
+VIRGEN	89
+VIRGEN	95
+VIRGINIA	97
+VIRGINIA	95
+VIRGINIA	99
+VITA	91
+VITA	97
+VITA	88
+VIVA	88
+VIVAN	88
+VIVIAN	85
+VIVIANA	88
+VIVIEN	84
+VIVIEN	84
+VIVIENNE	85
+VIVIENNE	82
+VIVIENNE	98
+VONCILE	91
+VONDA	89
+VONNIE	89
+VONNIE	94
+WAI	91
+WAI	96
+WALTER	92
+WALTRAUD	98
+WALTRAUD	88
+WAN	88
+WAN	90
+WANDA	87
+WANETA	92
+WANETA	81
+WANITA	98
+WAVA	87
+WAVA	99
+WEI	82
+WEN	89
+WEN	91
+WEN	86
+WENDI	88
+WENDOLYN	99
+WENDOLYN	83
+WENDY	96
+WENDY	88
+WENDY	89
+WENDY	82
+WESLEY	84
+WHITLEY	94
+WHITLEY	93
+WILDA	93
+WILHELMINA	93
+WILHELMINA	95
+WILLA	99
+WILLA	97
+WILLENA	95
+WILLENE	91
+WILLETTA	89
+WILLETTA	86
+WILLETTE	85
+WILLIA	90
+WILLIE	92
+WILLIEMAE	93
+WILLIEMAE	95
+WILLODEAN	85
+WILLODEAN	88
+WILLOW	93
+WILMA	99
+WINNIE	97
+WINNIFRED	88
+WINNIFRED	90
+WINNIFRED	87
+WINTER	83
+WINTER	83
+WINTER	82
+WONDA	88
+WONDA	90
+WONDA	98
+WYNELL	97
+WYNELL	86
+WYNONA	84
+WYNONA	89
+XENIA	94
+XIAO	97
+XIAO	90
+XIOMARA	97
+XOCHITL	83
+XOCHITL	88
+YADIRA	87
+YADIRA	98
+YAEKO	97
+YAEKO	96
+YAEKO	95
+YAEL	82
+YAEL	92
+YAHAIRA	89
+YAHAIRA	86
+YAJAIRA	93
+YAJAIRA	87
+YAN	99
+YAN	85
+YAN	91
+YAN	98
+YANIRA	87
+YANIRA	89
+YANIRA	98
+YASMIN	95
+YASMINE	86
+YASMINE	98
+YASMINE	91
+YEE	93
+YELENA	99
+YELENA	95
+YEN	86
+YER	91
+YESENIA	82
+YESENIA	93
+YESSENIA	82
+YESSENIA	94
+YETTA	95
+YEVETTE	83
+YI	91
+YI	87
+YING	97
+YOKO	83
+YOKO	93
+YOLANDE	86
+YOLANDO	82
+YOLANDO	81
+YON	99
+YON	99
+YONG	81
+YONG	81
+YOSHIE	84
+YOSHIKO	96
+YOSHIKO	81
+YOULANDA	81
+YOULANDA	85
+YUK	91
+YUK	96
+YUKI	82
+YUKI	94
+YUKIKO	87
+YUKO	97
+YUN	89
+YUN	94
+YUNG	85
+YUONNE	91
+YUONNE	84
+YURI	87
+YURIKO	93
+YVETTE	89
+YVONNE	81
+ZADA	92
+ZADA	92
+ZADA	92
+ZADA	89
+ZAIDA	96
+ZAIDA	83
+ZAIDA	90
+ZANDRA	92
+ZELDA	87
+ZELLA	99
+ZELMA	97
+ZELMA	81
+ZENA	98
+ZENAIDA	97
+ZENAIDA	97
+ZENIA	81
+ZENIA	83
+ZENOBIA	96
+ZITA	88
+ZITA	83
+ZOE	91
+ZOILA	94
+ZONA	90
+ZONA	96
+ZONA	93
+ZONIA	89
+ZORAIDA	94
+ZULA	91
+ZULMA	90
+
